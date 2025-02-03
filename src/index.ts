@@ -1,15 +1,17 @@
-import Scanner from "@codeea/scanner";
+import { Pessoa } from "./classes/Pessoa";
+import { Forma } from "./classes/Forma";
+import { Quadrado } from "./classes/Quadrado";
+import { Triangulo } from "./classes/Triangulo";
 
-console.log("Olá mundo");
+const pessoa = new Pessoa("Cezar", 34, "12345678901", "M");
 
-const scanner = new Scanner();
+console.log(pessoa.nome);
+console.log(pessoa.idade);
+console.log(pessoa.cpf);
+console.log(pessoa.sexo);
 
-const text = scanner.question("Informe um texto");
-const floatNumber = scanner.questionFloat("Informe um número com decimal");
-const intNumber = scanner.question("Informe um número inteiro");
+pessoa.idade = 35;
 
-console.log("Texto ", text);
-console.log("Número Decimal", floatNumber);
-console.log("Número Inteiro ", intNumber);
-
-scanner.close();
+const forma1 = new Quadrado([1, 1, 1, 1]);
+const forma2 = new Forma("Triangulo", [1, 2, 3], 3);
+const triangulo = new Triangulo ([1,2,3])
