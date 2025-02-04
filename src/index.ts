@@ -30,3 +30,8 @@ console.log(trianguloIsosceles.getTipo());
 
 const trianguloEscaleno = new Triangulo([1, 2, 3]);
 console.log(trianguloEscaleno.getTipo());
+
+const motorE36 = new Motor("E36", 2990, 240, "Gasolina", 6);
+const transmissao = new Transmissao("1234", "Automatico", 6);
+
+const bmwM3 = new Carro("BMW", "M3", "Azul", 2005, motorE36, transmissao);

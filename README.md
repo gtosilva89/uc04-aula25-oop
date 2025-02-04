@@ -1,17 +1,12 @@
-# TypeScript Template
-
-Pacotes instalados:
-
-```json
-  ...
-  "devDependencies": {
-    "@types/node": "^22.10.1",
-    "nodemon": "^3.1.7",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.7.2"
-  },
-  "dependencies": {
-    "@codeea/scanner": "^1.0.3"
-  }
-  ...
-```
+ classes
+ objetos
+ atributos
+ tipos de dados (string, number, boolean, null, undefined)
+ métodos (getters, setters) e propriedades
+ modificadores de acesso (private, public, protected)
+ encapsulamento
+ conceitos de herança
+ agregação;
+ interfaces
+ polimorfismo (classes abstratas, sobrecarga e sobrescrita de métodos)
+ tratamento de erros e exceções;
