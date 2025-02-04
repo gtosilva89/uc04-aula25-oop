@@ -1,7 +1,7 @@
-import { Pessoa } from "./classes/Pessoa";
-import { Forma } from "./classes/Forma";
-import { Quadrado } from "./classes/Quadrado";
-import { Triangulo } from "./classes/Triangulo";
+import { Pessoa } from "./pessoa/Pessoa";
+import { Forma } from "./carro/Forma";
+import { Quadrado } from "./carro/Quadrado";
+import { Triangulo } from "./geometria/Triangulo";
 
 const pessoa = new Pessoa("Cezar", 34, "12345678901", "M");
 
