@@ -1,41 +1,23 @@
-import { Cliente } from "./Cliente";
-import { ContaCorrente } from "./ContaCorrente";
-import { ContaPoupanca } from "./ContaPoupanca";
+export class Transacao {
+  private _valor: number;
+  private _tipo: "C" | "D";
+  private _dataHora: Date;
 
-const cliente = new Cliente(
-  "Cezar",
-  "123455234320",
-  "cezar@email.com",
-  new Date("1990-07-12")
-);
+  constructor(valor: number, tipo: "C" | "D", dataHora: Date) {
+    this._valor = valor;
+    this._tipo = tipo;
+    this._dataHora = dataHora;
+  }
 
-const conta = new ContaCorrente(1233, 12311, cliente, new Date("2009-06-06"));
+  public get valor() {
+    return this._valor;
+  }
 
-const contaPoupanca = new ContaPoupanca(
-  1233,
-  12311,
-  cliente,
-  new Date("2009-06-06")
-);
+  public get tipo() {
+    return this._tipo;
+  }
 
-contaPoupanca.updateSaldo(30, "C");
-
-contaPoupanca.updateSaldo(20, "D");
-
-const saldoPoupanca = contaPoupanca.getSaldo();
-console.log(`Saldo conta poupanca: ${saldoPoupanca}`);
-
-const contaCorrente = new ContaCorrente(
-  1234,
-  123123,
-  cliente,
-  new Date("2010-01-01")
-);
-
-contaCorrente.updateSaldo(20, "C");
-console.log(`Saldo da conta corrente: ${contaCorrente.getSaldo()}`);
-
-contaCorrente.updateSaldo(30, "D");
-contaCorrente.updateSaldo(9.99, "C");
-contaCorrente.getExtrato();
-console.log(`Saldo da conta corrente: ${contaCorrente.getSaldo()}`);
+  public get dataHora() {
+    return this._dataHora;
+  }
+}
